@@ -1,0 +1,98 @@
+﻿<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Anton|Crimson+Text|Dancing+Script|Inconsolata|Indie+Flower|Lobster|Lobster+Two|Lora|Pacifico|Playfair+Display|Quicksand|Raleway|Shadows+Into+Light|Source+Sans+Pro" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+<link rel="stylesheet" type="text/css" href="CSS/textformating.css">
+<script src="JS/toolsets.js"></script>
+<section id="topMenu">
+  <ul class="navigB">
+    <li><a class="navBitm"> Home </a></li>
+    <li class="divider"></li>
+    <li><a class="navBitm"> Home </a></li>
+    <li class="divider"></li>
+    <li><a class="navBitm"> Home </a></li>
+  </ul>
+</section>
+<center>
+    <p id="counter">#</p> <!-- temporal tag -->
+<div class="inputCnt">  
+  
+  <ul class="toolSet">
+    <!--     toolS1 para el swtichcase en javascript -->
+    
+    <!-- text justification-->
+      <li toolS1="txtJust" class="control isClosed"><i class="fas fa-align-justify"></i> </li>
+      <li toolS1="txtLeft" class="control isClosed"><i class="fas fa-align-left"></i> </li>
+      <li toolS1="txtCntr" class="control isClosed"><i class="fas fa-align-center"></i> </li>
+      <li toolS1="txtRght" class="control isClosed"><i class="fas fa-align-right"></i> </li>
+      
+    
+      <li class="divider isClosed"></li>
+    <!-- text decoration-->
+      <li toolS2="txtNorm" class="control isClosed"><i class="fas fa-font"></i> </li>
+      <li toolS2="txtItlc" class="control isClosed"><i class="fas fa-italic"></i> </li>
+      <li toolS2="txtBold" class="control isClosed"><i class="fas fa-bold"></i> </li>
+      <li toolS2="txtUndr" class="control isClosed"><i class="fas fa-underline"></i> </li>  
+    <!-- no son necesarias las comillas, es posible agregarlas desde el teclado -->
+      <li class="divider isClosed"></li>   
+    <!-- font size-->
+      <li toolS3="txtMins" class="control isClosed"><i class="fas fa-minus"></i> </li>
+      <li toolS3="txtDflt" class="control isClosed"><i class="fas fa-font fntIsDflt"></i> </li>
+      <li toolS3="txtMaxi" class="control isClosed"><i class="fas fa-plus"></i> </li>   
+    
+      <li class="divider isClosed"></li>
+    <!-- scrolls thru the font families available-->
+      <li cntrlFont="fntPrev" class="control isClosed"><i class="fas fa-caret-left"></i> </li>
+      <li cntrlFont="txtFont" class="control " fntType="font0">Default</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font1">Raleway</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font2">Source Sans Pro</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font3">Playfair Display</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font4">Lora</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font5">Inconsolata</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font6">Crimson</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font7">Indie Flower</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font8">Quicksand</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font9">Anton</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font10">Lobster</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font11">Lobster 2</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font12">Pacifico</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font13">Shadows Into Light</li>
+      <li cntrlFont="txtFont" class="control isFntType" fntType="font14">Dancing Script</li>
+      
+      <li cntrlFont="fntNext" class="control isClosed"><i class="fas fa-caret-right"></i> </li>
+    
+      <li class="divider isClosed"></li>
+     <!-- switches between header, normal parragraph, quoted etc-->
+      <li cntrlPrf="prfPrev" class="control isClosed"><i class="fas fa-caret-left"></i> </li>      
+      <li cntrlPrf="prfType" class="control isPrhType">Linea</li>
+      <li cntrlPrf="prfType" class="control isPrhType">Cita</li>
+      <li cntrlPrf="prfType" class="control isPrhType">Parrafo</li>
+      <li cntrlPrf="prfType" class="control isPrhType">Titulo</li>
+      <li cntrlPrf="prfType" class="control isPrhType">Subtitulo</li>            
+      <li cntrlPrf="prfNext" class="control isClosed"><i class="fas fa-caret-right"></i> </li>
+    
+      <li class="divider isClosed"></li>
+      <!-- modifies the input position and places the image in the required position -->
+      <li cntrlmg="imgLeft" class="control isClosed"><i class="fas fa-caret-left"></i> </li>
+      <li cntrlmg="imgCntr" class="control isClosed"><i class="fas fa-image"></i> </li>
+      <li cntrlmg="imgRght" class="control isClosed"><i class="fas fa-caret-right"></i> </li>    
+    
+      <li class="divider isClosed"></li>
+      
+    <!-- detrmines the behaviour of the Cntrl Bar (its closed or opened? etc) -->
+      <li cntrl="ctrClse" class="control isClosed"><i class="fas fa-times-circle"></i></li>
+    <!-- while using the small version (for ipad or small laptops) youll only
+         be presented with a single batch of icons, tho you'll be able to hit next to 
+         show the next one and like that scroll through the whole control menu -->    
+      <li cntrl="ctrNext" class="control toolsNext"><i class="fas fa-chevron-circle-right"></i></li>
+    <!-- only appears when the edit button isnt showing, bc it means the edit bar has been opened -->
+      <li cntrl="ctrSave" class="control isClosed"><i class="fas fa-check-circle"></i> </li> 
+      <li cntrl="ctrEdit" class="control itOpens"><i class="fas fa-pen"></i></li>
+    
+  </div>  
+  <input class="txtInpt"></input>
+  <!-- maybe add a button to save changes, like to send the generated json to the DB-->
+  <center>
+</div>
