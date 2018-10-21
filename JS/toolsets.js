@@ -1,4 +1,7 @@
-﻿$(document).ready(function(){
+﻿let switchval = 0;
+let switchval2 = 0;
+
+$(document).ready(function(){
 
 /*checks if JS is loaded*/
 let hal = "Hal-9000: ";
@@ -9,7 +12,6 @@ let isClosed = $(".isClosed"); /*used to hide icons*/
 let itOpens = $(".itOpens"); /*used to open the toolsets bar*/
 let toolsNext = $(".toolsNext"); /*rotate thru toolsets when in small device mode*/
 let err = " ¡error! working on it";
-let switchval = 0;
 itOpens.hide();   
 toolsNext.hide();
 $(document).on('click','.control',function(){
@@ -101,17 +103,22 @@ $(document).on('click','.control',function(){
     }*/
     /*parragraph style*/ 
     let prfStyle = $(this).attr('cntrlPrf');
-    let prfS = "paragraph style selected "
+    let prfS = "paragraph style selected ";
+    let counter2 = document.getElementById("counter2"); 
     switch(prfStyle)
     {
       case 'prfPrev':
         console.log(hal + prfS + "previous" + err);
+        rotatorParagraphBck();
+        getFntType(switchval2);
         break;
       case 'prfType':
         console.log(hal + prfS + "nothing" + err);
         break;
       case 'prfNext':
         console.log(hal + prfS + "next" + err);
+        rotatorParagraphNxt();
+        getFntType(switchval2);
         break;
     }
     /*image position*/ 
@@ -159,27 +166,21 @@ $(document).on('click','.control',function(){
     /*font rotator*/ 
     let cntrlNxt = $(this).attr('cntrlFont');
     let txtFnt = $(this).attr('isFnType');    
-    let counter = document.getElementById("counter");    
+    let counter = document.getElementById("counter");        
      
     switch(cntrlNxt)
     {
       case 'fntNext':
-        console.log("next")   
-        rotatorFontNxt();                                       
+      console.log("next");      
+      rotatorFontNxt();//sets the value of switchval so it can scroll through the font types                                        
+      getFntType(switchval)//looks for the value and outputs the font family corresponding  
       break;
 
-      case 'fntPrev':
-      console.log("back")
-          if(switchval > 0)
-          {
-            console.log(switchval = switchval - 1 );/*++ just fucked shit*/ 
-            counter.innerHTML=switchval;
-          }
-          else
-          {switchval = 14;}
-      break;
-    
-    
+      case 'fntPrev':      
+      console.log("back");
+      rotatorFontBck();
+      getFntType(switchval)  
+      break;        
     }
 
   });
@@ -213,24 +214,42 @@ setInterval(function() {
   location.reload();
 }, 1500);*/
 
-});
 
+});
+//////////////////////////////font family//////////////////////////////
+function rotatorFontBck()
+{
+  if(switchval > 0)
+    {
+       console.log(switchval = switchval - 1 );/*++ just fucked shit*/ 
+       counter.innerHTML=switchval;       
+    }
+  else
+    {switchval = 14;}
+}
 function rotatorFontNxt()
 {       
-  let switchval = a;
-  window.switchval;
-
   if(switchval < 14)
-  {
-    
-    console.log(switchval = switchval + 1 );
-    counter.innerHTML=switchval;   
-    getFntType(switchval);  
-  }
+    {    
+      console.log(switchval = switchval + 1 );
+      counter.innerHTML=switchval;   
+    }
   else
-  {switchval = 0;}      
-}
+    {switchval = 0;}      
+   //it wont accept the switchval function (which is global)
+ //find a  way so the global function can be accessed by this function
 
+ /*it didnt accepted it because the variable was 
+ inside document.ready (in the variable ready scope)
+ the quickest solution that came to my mind was to 
+ bring the function to the doc.ready scope.
+ 
+ solution 2: place the variable in the global scope 
+ (outside the document.ready function scope), thats 
+ what was giving me trouble, the variable wasnt global
+ because it was inside a function.
+ */
+}
 
 function getFntType(switchval) {
   switch (switchval) {
@@ -251,4 +270,36 @@ function getFntType(switchval) {
     case 14: console.log("Dancing Script"); break;
   }
 }
+//////////////////////////////paragraph//////////////////////////////
 
+function rotatorParagraphBck()
+{
+  if(switchval2 > 0)
+    {
+       console.log(switchval2 = switchval2 - 1 );/*++ just fucked shit*/ 
+       counter2.innerHTML=switchval2;       
+    }
+  else
+    {switchval2 = 5;}
+}
+function rotatorParagraphNxt()
+{       
+  if(switchval2 < 4)
+    {    
+      console.log(switchval2 = switchval2 + 1 );
+      counter2.innerHTML=switchval2;   
+    }
+  else
+    {switchval2 = 0;}      
+
+}
+
+function getFntType(switchval2) {
+  switch (switchval2) {
+    case 0: console.log("Linea"); break;
+    case 1: console.log("Cita"); break;
+    case 2: console.log("Parrafo"); break;
+    case 3: console.log("Titulo"); break;
+    case 4: console.log("Subtitulo"); break;
+  }
+}
