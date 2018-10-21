@@ -14,24 +14,35 @@ ul
     user-select: none;
     border-radius:60px;
     background: #dbdbdb;
-    padding: 0.65vw;    
+    padding: 1vw;    
     color:#727272;
   }
-.navigB
+.navBar > li
+{
+  padding: 1vw;
+}
+li.divider.dvdrTop
+{
+  padding:.15vw;
+  padding-bottom: 0.25vw;
+  background: #cecece;
+}
+.navBar
 {
   border-radius:00px;
   background-color: #c2c2c2;
-  color:#565656;  
-  padding: 1vw;
+  color:#565656;      
 }
-.navigB > li:hover
+.navBar > li:hover
 {
-  background:#565656;
-  color:#c1c1c1;
-  font-weight: 900;
+  /*background:#565656; maybe ill use this variant in the end
+  /*color:#c1c1c1;*/
+  box-shadow:inset 0px -100px 0px #e7e7e7;
+  /*font-weight: 900;*/
 }
 li
 {
+  transition: .2s ease-in-out;
   padding: .40vw;  
   padding-left:1vw;
   display: inline;  
