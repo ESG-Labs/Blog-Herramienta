@@ -1,0 +1,36 @@
+﻿.isJust{text-align:justify}
+.isLeft{text-align:left}
+.isCntr{text-align:center}
+.isRight{text-align:right}
+
+.isNorm{text-decoration:none; font-family: normal;}
+.isItlc{font-style: italic}  
+.isBold{font-weight: 900}
+.isUndrLn{text-decoration: underline}
+/*
+- sets the font value to its default size vvv
+- it takes the dynamic value from the parragraph and makes it static*/
+.fntIsDfl{font-size:18px;}
+/*maybe make the edit controlss to only expant one at a time */
+
+/*just for the 2 first toolsets*/
+.isFntType{display:none}
+.isPrhType{display:none}
+.isSelected{color:#3a3a3a;}
+.isNotSelected{color:#727272;}
+.itOpens{padding-left:0;}
+
+  isRaleway {font-family: 'Raleway', sans-serif;}
+  isSourceSans {font-family: 'Source Sans Pro', sans-serif;}
+  isPlayfair {font-family: 'Playfair Display', serif;}
+  isLora {font-family: 'Lora', serif;}
+  isInconsolata {font-family: 'Inconsolata', monospace;}
+  isCrimson {font-family: 'Crimson Text', serif;}
+  isIndieFlwr {font-family: 'Indie Flower', cursive;}
+  isQuicksand {font-family: 'Quicksand', sans-serif;}
+  isAnton {font-family: 'Anton', sans-serif;}
+  isLobster {font-family: 'Lobster', cursive;}
+  isLobster2 {font-family: 'Lobster Two', cursive;}
+  isPacifico {font-family: 'Pacifico', cursive;}
+  isShadows {font-family: 'Shadows Into Light', cursive;}
+  isDanScript {font-family: 'Dancing Script', cursive;}
