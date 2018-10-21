@@ -1,3 +1,4 @@
+*im starting to consider using react :O*
 like blogger but cooler, 
 
 kind of a social network :O
